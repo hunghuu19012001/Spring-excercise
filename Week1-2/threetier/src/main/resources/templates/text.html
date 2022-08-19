@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff list</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Object list <span th:text="${roomID}"></span></h1>
+    <table style="text-align: center; background-color: #EEEEEE;" border="1" cellpadding="2" cellspacing="0" align="center">
+        <tr style="background-color: black; color: #EEEEEE;">
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Hobby</th>
+        </tr>
+        <tr align="center">
+        <tr th:each="Object: ${listObject}">
+            <td th:text="${Object.id}"></td>
+            <td th:text="${Object.name}"></td>
+            <td th:text="${Object.age}"></td>
+            <td th:text="${Object.hobby}"></td>
+        </tr>
+    </table>
+</body>
+</html>
